@@ -44,10 +44,10 @@ function Single(props) {
 
           })
           .then((response)=>{   
-            toastr.info ('Assigned Successfully')
+            toastr.success ('Assigned Successfully')
             props.history.push('/ticket-list')
          })
-         .catch((error) => { toastr.warning(error , 'Server Error ')})
+         .catch((error) => { toastr.error(error , 'Server Error ')})
      }
 
 

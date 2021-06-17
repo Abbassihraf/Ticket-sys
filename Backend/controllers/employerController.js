@@ -25,6 +25,7 @@ exports.addDepartment = async (req, res) => {
     }
 }
 
+// Fetch all
 exports.getDepartment = async (req, res) => {
     try {
         const department = await Department.find();

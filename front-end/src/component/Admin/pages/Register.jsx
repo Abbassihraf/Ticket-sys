@@ -70,6 +70,7 @@ const Register = (props) => {
                             <option disabled selected>Select Your Role</option>
                             <option  defaultValue="employer">Employer</option>
                             <option  defaultValue="technician">technician</option>
+                            <option  defaultValue="admin">admin</option>
                         </select>
                     </div>
                     <div className="form-group">

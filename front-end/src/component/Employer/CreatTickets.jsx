@@ -17,10 +17,10 @@ function CreateTicket(props) {
          await axios.post(' http://localhost:3001/api/addTicket', createTicket)
           .then((response)=>{
                
-               toastr.info ('Ticket Created Successfully')
+               toastr.success ('Ticket Created Successfully')
                props.history.push('/employer')
           })
-          .catch((error) => { toastr.warning(error , 'Server Error ')})
+          .catch((error) => { toastr.error(error , 'Server Error ')})
      }
 
 

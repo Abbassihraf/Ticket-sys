@@ -16,6 +16,7 @@ exports.signup = async (req, res) => {
     const ifEmailExist = await Employer.findOne({ email });
     if (ifEmailExist) return res.status(400).json('email already exist!');
     const employer = new Employer({
+        // Construction
         ...req.body,
         id_department: findDepartment._id
         
