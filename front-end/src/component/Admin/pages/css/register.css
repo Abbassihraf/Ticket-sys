@@ -1,0 +1,26 @@
+.custom-select:focus{
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus{
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control{
+    background: none !important;
+}
+
+
+.custom-file-control:read-only, .form-control:read-only{
+    background: none !important;
+}
+
+.form-control{
+    padding: 10px !important;
+}
+
+.btn-register{
+    width: 100%;
+}

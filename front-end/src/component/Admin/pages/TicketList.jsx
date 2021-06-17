@@ -33,8 +33,8 @@ function GetTicket() {
               <table class="table table table-bordered  mt-4">
                 <thead>
             <tr>
-              <th scope="col">Date</th>
               <th scope="col">Title</th>
+              <th scope="col">Date</th>
               <th scope="col">Type</th>
               <th scope="col">Emergency</th>
               <th scope="col">Etat</th>
@@ -44,8 +44,8 @@ function GetTicket() {
                 <tbody>
               {getTicket.map((Data)=>(
                     <tr >
-                      <td>{Data.date}</td>
                       <td>{Data.title}</td>
+                      <td>{Data.date}</td>
                       <td>{Data.type}</td>
                       <td>{Data.emergency}</td>
                       <td>{Data.etat}</td>
