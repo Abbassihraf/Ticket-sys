@@ -93,7 +93,7 @@ const Register = () => {
 
                     
                     <div className="input-group ">
-                        <button type="submit" className="btn btn-register btn-outline-dark mt-3 mb-5">Register</button>
+                        <button type="submit" className="btn-register btn-outline-dark mt-3 mb-5">Register</button>
                     </div>
                 </form>
                </div>

@@ -5,6 +5,8 @@ import axios from 'axios'
 import toastr from 'toastr';
 import 'toastr/build/toastr.css';
 
+import '../css/login.css';
+
 axios.defaults.withCredentials = true
 
 function Login(props) {
@@ -53,7 +55,7 @@ function Login(props) {
       }
     }
     catch (error) {
-      toastr.warning(error , 'Server Error ')
+      toastr.error(error , 'Email or password is incorrect')
       if(error) console.log(error.response);
     }
 
@@ -61,31 +63,45 @@ function Login(props) {
 
 
   const Login = () => (
-    <form onSubmit={handelSubmit}>
-         <div className="form-group">
-             <label htmlFor="email" className="text-muted">Email</label>
-             <input onChange={handelChange}  type="text" className="form-control" name="email"/>
-         </div>
-         <div className="form-group">
-             <label htmlFor="password" className="text-muted">Password</label>
-             <input onChange={handelChange}  type="password" className="form-control" name="password"/>
-         </div>
-         <button className="btn btn-lg btn-block btn-outline-info">Login</button>
-        </form>
+
+    <form onSubmit={handelSubmit} className="form-group">
+      <div className="row">
+        <input onChange={handelChange} type="text" name="email" className="form__input" placeholder="Email"/>
+      </div>
+      <div className="row">
+        <input onChange={handelChange} type="password" name="password" className="form__input" placeholder="Password"/>
+      </div>
+
+      <div className="row">
+        <input type="submit" value="Submit" className="btn btn-dark btn-lg btn-block "/>
+      </div>
+    </form>
+    
  )
  return (
-     <div>
-        <Layout title="Login">
-            <div className="row">
-                <div className="col-md-6 mx-auto">
+<div>
 
-                  { Login() }
-                </div>
-             </div>
-            
+<div className="container">
+<div className="row main-content bg-success text-center">
+  <div className="col-md-4 text-center company__info">
+    <span className="company__logo"></span>
+    <h4 className="company_title">Ticketing system</h4>
+  </div>
+  <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
+    <div className="container-fluid">
+      <div className="row">
+        <h2>Log In</h2>
+      </div>
+      <div className="row">
 
-        </Layout>
-     </div>
+      { Login() }
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
  )
 }
 
