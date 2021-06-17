@@ -12,7 +12,7 @@ axios.defaults.withCredentials = true
 const Register = () => {
   
     const history = useHistory()
-    const initialState = { full_name:'', email:'', password:'', type: 'Employer', id_department: ''}
+    const initialState = { full_name:'', email:'', password:'', type: 'employer', id_department: ''}
     const [infosUser, setInfosUser] = useState(initialState)
     const [department, setDepartment] = useState([])
 
@@ -65,9 +65,9 @@ const Register = () => {
                     <div className="form-group">
                         <select name='type' className="custom-select" onChange={changeValue} >
                             <option disabled selected>-- Select role --</option>
-                            <option  defaultValue="admin">Admin</option>
-                            <option  defaultValue="employer">Employer</option>
-                            <option  defaultValue="technician">Technician</option>
+                            <option  defaultValue="Admin">admin</option>
+                            <option  defaultValue="employer">employer</option>
+                            <option  defaultValue="technician">technician</option>
                         </select>
                     </div>
 

@@ -1,13 +1,17 @@
 import React, {Fragment} from 'react'
 import { Link, withRouter} from 'react-router-dom'
 
+import './css/navAdmin.css';
 
 
-const NavAdmin = (props) =>{
+const NavAdmin = () =>{
 
     return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+      <div>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container">
+
+
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -18,10 +22,10 @@ const NavAdmin = (props) =>{
                   <Link  className="nav-link" to="/register">Register <span className="sr-only">(current)</span></Link >
                 </li>
                 <li className="nav-item active">
-                  <Link  className="nav-link" to="/closed">Closed Tickets <span className="sr-only">(current)</span></Link >
+                  <Link  className="nav-link" to="/tickets-list">Tickets Lists<span className="sr-only">(current)</span></Link >
                 </li>
                 <li className="nav-item active">
-                  <Link  className="nav-link" to="/tickets-list">Tickets Lists<span className="sr-only">(current)</span></Link >
+                  <Link  className="nav-link" to="/closed">Closed Tickets <span className="sr-only">(current)</span></Link >
                 </li>
               
               </Fragment>
@@ -39,6 +43,7 @@ const NavAdmin = (props) =>{
             </ul>
            
             
+          </div>
           </div>
       </nav>      
      </div>
