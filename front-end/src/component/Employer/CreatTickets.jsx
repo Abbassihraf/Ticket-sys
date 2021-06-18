@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useHistory} from 'react-router-dom'
+import NavEmp from './NavEmp'
 import Layout from '../../core/Layout'
 import axios from 'axios'
 import toastr from 'toastr';
@@ -36,43 +37,56 @@ function CreateTicket() {
 
     
      const form = () =>(
-        <form onSubmit={createTickets}>
-       
+          <form onSubmit={createTickets}>
+
           <div className="form-group">
-                                   <label htmlFor="registration_number">Title</label>
-                                   <input type="text" className="form-control" name="title" onChange={handelChange} />
-          </div>   
-          <div className="form-group">
-                                   <label htmlFor="mark">Description</label>
-                                   <textarea className="form-control" name="description" rows="4"  onChange={handelChange} ></textarea >
-                              </div>
-                              <div className="form-group">
-                                   <label>Type</label>
-                                   <select className="custom-select" name="type"  onChange={handelChange}  >
-                                        <option>Type...</option>
-                                        <option value='hardware'>Hardware</option>
-                                        <option value='software'>Software</option>
-                                   </select>
+               <label htmlFor="registration_number">Title</label>
+               <input
+                    type="text"
+                    className="form-control"
+                    name="title"
+                    onChange={handelChange}/>
           </div>
-            
+
           <div className="form-group">
-                                   <label> Emergency</label>
-                                   <select className="custom-select" name="emergency"  onChange={handelChange} >
-                                        <option> Emergency Type...</option>
-                                        <option value='urgent'>Urgent</option>
-                                        <option value='medium'>Medium</option>
-                                        <option value='normal'>Normal</option>
-                                   </select>
+               <label>Type</label>
+               <select className="custom-select" name="type" onChange={handelChange}>
+                    <option>-- Select type --</option>
+                    <option value='hardware'>Hardware</option>
+                    <option value='software'>Software</option>
+               </select>
           </div>
-          <button className="btn btn-lg btn-block btn-outline-success">Create</button>
-          
-         
+
+          <div className="form-group">
+               <label>
+                    Emergency</label>
+               <select className="custom-select" name="emergency" onChange={handelChange}>
+                    <option>-- Select emergency type --</option>
+                    <option value='urgent'>Urgent</option>
+                    <option value='medium'>Medium</option>
+                    <option value='normal'>Normal</option>
+               </select>
+          </div>
+
+          <div className="form-group">
+               <label htmlFor="mark">Description</label>
+               <textarea
+                    className="form-control"
+                    name="description"
+                    rows="4"
+                    onChange={handelChange}></textarea >
+          </div>
+
+
+          <button className="btn-register btn-outline-dark mt-3 mb-5">Create</button>
+
           </form>
      )
      return (
      <>
+     <NavEmp/>
         <div>
-          <Layout title="Create Your Tickets"></Layout>
+          <Layout title="Create new ticket"></Layout>
         </div>
         <div>
                <div className="row"> 

@@ -31,11 +31,11 @@ return (
                 <thead>
                     <tr>
                         <th scope="col">Date</th>
-                    
                         <th scope="col">Title</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Type</th>
                         <th scope="col">Emergency</th>
-                        <th scope="col">Etat</th>
+                        <th scope="col">Status</th>
                     
                     </tr>
                 </thead>
@@ -44,6 +44,7 @@ return (
                         <tr >
                             <td>{Data.date}</td>
                             <td>{Data.title}</td>
+                            <td>{Data.description}</td>
                             <td>{Data.type}</td>
                             <td>{Data.emergency}</td>
                             <td>{Data.etat}</td>

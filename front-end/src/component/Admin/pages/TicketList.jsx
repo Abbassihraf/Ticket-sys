@@ -33,23 +33,25 @@ function GetTicket() {
               <table class="table table table-bordered  mt-4">
                 <thead>
             <tr>
-              <th scope="col">Title</th>
               <th scope="col">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
               <th scope="col">Type</th>
               <th scope="col">Emergency</th>
-              <th scope="col">Etat</th>
+              <th scope="col">Status</th>
               <th scope="col">Assign</th>
             </tr>
           </thead>
                 <tbody>
               {getTicket.map((Data)=>(
                     <tr >
-                      <td>{Data.title}</td>
                       <td>{Data.date}</td>
+                      <td>{Data.title}</td>
+                      <td>{Data.description}</td>
                       <td>{Data.type}</td>
                       <td>{Data.emergency}</td>
                       <td>{Data.etat}</td>
-                      <td><Link to={`/assign=${Data._id}`} className="btn btn-outline-success">Assign</Link></td>
+                      <td><Link to={`/assign=${Data._id}`} className="btn-outline-success">Assign</Link></td>
                   </tr>
                 ))
               }

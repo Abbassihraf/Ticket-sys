@@ -37,9 +37,10 @@ function Tech() {
                     <tr>
                          <th scope="col">Date</th>
                          <th scope="col">Title</th>
+                         <th scope="col">Description</th>
                          <th scope="col">Type</th>
-                         <th scope="col"> Emergency</th>
-                         <th scope="col">Etat</th>
+                         <th scope="col">Emergency</th>
+                         <th scope="col">Status</th>
                          <th scope="col"> Action</th>
                     </tr>
                     </thead>
@@ -51,11 +52,12 @@ function Tech() {
                          <tr key={key}>
                               <th  scope="row">{val.date}</th>
                               <td>{val.title}</td>
+                              <td>{val.description}</td>
                               <td>{val.type}</td>
                               <td>{val.emergency}</td>
                               <td>{val.etat === 'waiting' ? <b style={{color: "red"}}>Waiting</b> : (val.etat === 'assigned' ? <b style={{color: "green"}}>Assigned</b> : <b style={{color: "green"}}>Resolved </b> )}</td>
                               <td>
-                                   <button onClick={()=>{deleteTicket(val._id)}} className="btn btn-outline-danger">Delete</button>
+                                   <button onClick={()=>{deleteTicket(val._id)}} className="btn-outline-danger">Delete</button>
                               </td>
                          </tr>
                     ))}

@@ -62,9 +62,9 @@ function Single(props) {
         <>
          <NavAdmin/>
         <div>
-        <Layout title="Assign Tickets"></Layout>
+        <Layout title="Assign a ticket"></Layout>
         </div>
-         <div id="wrapper">
+
             <div id="page-content-wrapper">
                 <div className="container-fluid">
                         <div className="row justify-content-center">
@@ -102,7 +102,7 @@ function Single(props) {
                                                 })}
                                     </select>
                                 </div>
-                                <button type="submit" className="btn btn-primary mt-3">Assign</button>
+                                <button type="submit" className="btn-register btn-outline-dark mt-3 mb-5">Assign</button>
 
                             </form>
                         
@@ -110,7 +110,7 @@ function Single(props) {
                         </div>
                 </div>
             </div>
-         </div>
+
         </>
      )
 }
