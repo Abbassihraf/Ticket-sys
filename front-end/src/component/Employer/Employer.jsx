@@ -28,7 +28,7 @@ function Tech() {
         <>
         <NavEmp/>
           <div>
-            <Layout title="Welcome To Dashboard Employer"></Layout>
+            <Layout title="Welcome To Employer Dashboard "></Layout>
           </div>
       
           <div className="container">

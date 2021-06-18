@@ -1,0 +1,10 @@
+.grid-action{
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+
+}
+
+.grid-action button{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
